@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  urlProductService: "http://localhost:8080/walmart/products/"
+  urlProductService: "http://back-walmart.herokuapp.com/walmart/products/"
 };
 
 /*
