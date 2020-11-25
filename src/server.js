@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const PORT = process.env.PORT || '8080'
 
 const app = express();
 
@@ -8,4 +9,5 @@ app.get('/',function(req,res){
     res.sendFile(path.join(__dirname+'/dist/ng-blog/index.html'));
 });
 
-app.listen(process.env.PORT || 4200);
+//app.listen(process.env.PORT || 4200);
+app.set("port", PORT);
