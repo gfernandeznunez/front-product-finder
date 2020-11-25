@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div *ngFor="let p of product; let i = index" class="card mb-4 box-shadow">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">{{p.brand}}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">
+          <div *ngIf="p.priceWithDiscount; else elseBlock">
+            ${{p.priceWithDiscount}} <small>-{{p.discount}}%</small>
+            <h3>Antes: ${{p.price}}</h3>
+          </div>
+          <ng-template #elseBlock>${{p.price}}</ng-template>
+        </h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li><img src="http://{{p.image}}"></li>
+          <li>{{p.description}}</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
