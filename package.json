@@ -9,9 +9,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "lite": "lite-server",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "ng build --prod"
   },
-  "engine": {
+  "engines": {
     "node": "10.14.2",
     "npm": "6.4.1"
   },
